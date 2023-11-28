@@ -3,49 +3,49 @@ title: 'PageIndex'
 description: 'Componente utilizado para renderizar a grid, paginação e filtros.'
 ---
 
-### Referência
+## Referência
 
-<AccordionGroup>
-  <Accordion icon="github" title="Propriedades">
-    |Nome|Padrão|Descrição|
-    |--|--|--|
-    |hasStoreModule|false|
-    |emptyListText|undefined|
-    |disableInitialSearch|undefined|
-    |[fields](https://github.com/AcesseSeuCondominio/asc-front/blob/5a6c7dc2139206752d522cfa23fa12c59fb5b889/types/services.d.ts#L170C11-L170C21)|requerido|
-    |modal|false|
-    |stats|false|
-    |hideHeader|false|
-    |hideFilter|false|
-    |hidePaginate|false|
-    |floatActions|true|
-    |onlyViewMode|undefined|
-    |hideActions|false|
-    |options|`{ title: true, toolbar: true, stats: false, paginate: true }`|
-    |modalOptions|`{ centered: false }`|
-    |groupOptions|`[]`|
-    |title|requerido|Título da grid (usado também para definir o title da página/aba)|
-    |controller|requerido|Módulo referente ao service|
-    |action|requerido|Módulo referente ao service|
-    |methodFetchList|`list`|Nome do método para buscar a grid|
-    |isSidebar|`false`|Diz se a grid está sendo renderizada numa sidebar|
-    |breadcrumb|`[]`|Lista de itens para uso em breadcrumb ex: `{text: <string>, to: <url>}[]`|
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Slots">
-    |Nome|Padrão|Descrição|
-    |--|--|--|
-    |`toolbar-filter`|vazio|Área entre o input de busca e o botão de filtros|
-    |`toolbar-filter-append`|vazio|Área após o botão de filtros|
-    |`toolbar`|vazio|Área antes do botão de troca de card/lista|
-    |`toolbar-append`|vazio|Área entre o botão de troca de card/lista e o de atualizar|
-    |`toolbar-unselected`|Botão para atualizar grid|Aparece apenas quando não há item selecionado|
-    |`toolbar-selected`|Botão para excluir múltiplo|Aparece quando há pelo menos um item selecionado|
-    |`add-button`|Botão para adicionar em nova página ou modal|Botão para adicionar
-  </Accordion>
-  <Accordion title="Eventos">
-    |Nome|Argumentos|Descrição|
-    |--|--|--|
-    |`asc::update::grid`|`{controller?: string; action?: string; keep?: boolean }`|Emita em $root para atualizar a grid|
-    |`update-key`||Quando a key do componente deve ser atualizada`
-  </Accordion>
-</AccordionGroup>
+#### Propriedades
+
+|Nome|Padrão|Descrição|
+|--|--|--|
+|hasStoreModule|false|
+|emptyListText|undefined|
+|disableInitialSearch|undefined|
+|[fields](https://github.com/AcesseSeuCondominio/asc-front/blob/5a6c7dc2139206752d522cfa23fa12c59fb5b889/types/services.d.ts#L170C11-L170C21)|requerido|
+|modal|false|
+|stats|false|
+|hideHeader|false|
+|hideFilter|false|
+|hidePaginate|false|
+|floatActions|true|
+|onlyViewMode|undefined|
+|hideActions|false|
+|options|`{ title: true, toolbar: true, stats: false, paginate: true }`|
+|modalOptions|`{ centered: false }`|
+|groupOptions|`[]`|
+|title|requerido|Título da grid (usado também para definir o title da página/aba)|
+|controller|requerido|Módulo referente ao service|
+|action|requerido|Módulo referente ao service|
+|methodFetchList|`list`|Nome do método para buscar a grid|
+|isSidebar|`false`|Diz se a grid está sendo renderizada numa sidebar|
+|breadcrumb|`[]`|Lista de itens para uso em breadcrumb ex: `{text: <string>, to: <url>}[]`|
+
+#### Slots
+
+|Nome|Padrão|Descrição|
+|--|--|--|
+|`toolbar-filter`|vazio|Área entre o input de busca e o botão de filtros|
+|`toolbar-filter-append`|vazio|Área após o botão de filtros|
+|`toolbar`|vazio|Área antes do botão de troca de card/lista|
+|`toolbar-append`|vazio|Área entre o botão de troca de card/lista e o de atualizar|
+|`toolbar-unselected`|Botão para atualizar grid|Aparece apenas quando não há item selecionado|
+|`toolbar-selected`|Botão para excluir múltiplo|Aparece quando há pelo menos um item selecionado|
+|`add-button`|Botão para adicionar em nova página ou modal|Botão para adicionar
+
+#### Eventos
+
+|Nome|Argumentos|Descrição|
+|--|--|--|
+|`asc::update::grid`|`{controller?: string; action?: string; keep?: boolean }`|Emita em $root para atualizar a grid|
+|`update-key`||Quando a key do componente deve ser atualizada`
